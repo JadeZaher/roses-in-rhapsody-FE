@@ -11,7 +11,8 @@
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^6.6.5",
     "@types/node": "^18.15.11",
-    "nuxt": "^3.3.3"
+    "nuxt": "^3.3.3",
+    "nuxt-calendly": "^0.1.14"
   },
   "dependencies": {
     "@nuxtjs/sanity": "^1.6.0",

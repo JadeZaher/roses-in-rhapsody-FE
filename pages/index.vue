@@ -16,7 +16,9 @@
       Creating your dream space by decorating craft environments and curating an
       unforgettable personal experience.
     </p>
-    <div class="flex md:flex-row flex-col md:mt-5 mt-10">
+    <div
+      class="flex md:flex-row flex-col md:mt-5 mt-10 w-full md:py-10 justify-center"
+    >
       <div
         class="relative md:m-10 md:mx-[2vw] m-5 grid place-items-center bg-gradientFamilies bg-cover bg-center rounded-2xl"
       >
@@ -59,10 +61,12 @@
       :items-to-show="1"
       :wrapAround="true"
       class="w-full h-full"
+      :autoplay="2000"
+      :pause-autoplay-on-hover="true"
     >
       <slide key="1">
         <h3
-          class="font-sans font-medium md:leading-10 md:text-body text-xs text-shadow text-center text-white md:max-w-[60vw] max-w-[60vw] p-5"
+          class="font-sans font-medium md:leading-10 md:text-body text-xs text-shadow text-center text-white max-w-[60vw] p-5"
         >
           “My parents just got to their hotel & wowza! My mom was so surprised &
           amazed. She called me and was tearful. You did hands down BEAUTIFUL
@@ -74,21 +78,34 @@
         </h3>
       </slide>
       <slide key="2">
-        <img src="/families.jpg" alt="" class="rounded-2xl drop-shadow-lg" />
+        <img src="/23.jpg" alt="" class="rounded-2xl max-w-[60vw]" />
+      </slide>
+      <slide key="3">
+        <h3
+          class="font-sans font-medium md:leading-10 md:text-body text-xs text-shadow text-center text-white max-w-[60vw] p-5"
+        >
+          “I want all of my client's to have Destinee decorate. I suggest it to
+          everyone and anyone. <br />
+          <br />
+          I share the rooms on video anytime I can.” –Jessie
+        </h3>
+      </slide>
+      <slide key="2">
+        <img src="/24.jpg" alt="" class="rounded-2xl max-w-[60vw]" />
       </slide>
 
       <template #addons>
         <navigation>
           <template #next>
             <span
-              class="text-black md:p-5 p-2 md:text-header text-xs bg-white rounded-md"
+              class="text-black p-3 text-sm bg-white bg-opacity-60 drop-shadow-md rounded-md right-[-20px] absolute"
             >
               >>
             </span>
           </template>
           <template #prev>
             <span
-              class="text-black md:p-5 p-2 md:text-header text-xs bg-white rounded-md"
+              class="text-black p-3 text-sm bg-white bg-opacity-60 drop-shadow-md rounded-md left-[-20px] absolute"
             >
               &lt;&lt;
             </span>
@@ -98,12 +115,54 @@
       </template>
     </carousel>
   </div>
+
+  <!-- booking -->
+  <div class="min-h-[100vh] grid place-items-center">
+    <div
+      class="md:max-w-[80%] max-w-[80%] max-h-[90vh] p-2 flex md:flex-row flex-col justify-start items-center rounded-xl shadow-2xl bg-gradientBase"
+    >
+      <div class="relative flex flex-col items-center md:max-w-[40%]">
+        <img
+          src="/destinee-image.jpg"
+          alt="Destinee Schriner and her family"
+          class="rounded-xl shadow-lg max-h-[45vh] md:max-h-full m-2 md:m-0"
+        />
+        <button
+          ref="rootElement"
+          @click="handleClick"
+          class="absolute bottom-5 m-2 bg-white rounded-md md:p-5 p-2 text-pink-400 hover:text-white font-semibold font-sans text-sm md:text-body duration-200 hover:drop-shadow-md hover:bg-gradientBase"
+        >
+          Book With Me
+        </button>
+      </div>
+      <div class="grid place-items-center">
+        <p
+          class="max-w-[70%] text-white font-medium text-xs md:text-subtitle md:leading-10 text-shadow m-[4vw] text-center md:text-left"
+        >
+          Hi I’m Destinee. Dreams of romance have always stuck in my head ever
+          since I read my first Lisa Kleypas book, Again The Magic when I was
+          fourteen. <br />
+          <br />
+          I imagined my handsome prince would come and sweep me off my feet. And
+          when I turned 19, I got married to that prince. Then after a couple of
+          years, our princess was born, completing our family.
+        </p>
+      </div>
+    </div>
+  </div>
 </template>
 
-<script setup>
+<script lang="ts" setup>
   import Hero from '~/components/Hero.vue';
   import 'vue3-carousel/dist/carousel.css';
   import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel';
+
+  const calendly = useCalendly();
+  const handleClick = () => {
+    calendly.initPopupWidget({
+      url: 'https://calendly.com/roses-in-rhapsody/30min',
+    });
+  };
 </script>
 
 <style>
@@ -143,9 +202,9 @@
   }
 
   .carousel__next {
-    right: -30px;
+    right: -20px;
   }
   .carousel__prev {
-    left: -30px;
+    left: -20px;
   }
 </style>
