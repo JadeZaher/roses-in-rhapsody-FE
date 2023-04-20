@@ -50,15 +50,15 @@ export const imageZ = z.object({
 export type ImageZ = z.infer<typeof imageZ>;
 
 export const mainImageZ = z.object({
-  _type: z.literal('image'),
-  asset: referenceZ,
+  _type: z.literal('image').optional(),
+  asset: referenceZ.optional(),
 });
 export type MainImageZ = z.infer<typeof mainImageZ>;
 
 export const authorZ = z.object({
   name: z.string(),
   slug: slugZ,
-  image: mainImageZ,
+  image: mainImageZ.optional(),
 });
 export type AuthorZ = z.infer<typeof authorZ>;
 
@@ -69,10 +69,10 @@ export const categoryZ = baseZ.extend({
 export type CategoryZ = z.infer<typeof categoryZ>;
 
 export const postZ = baseZ.extend({
-  author: z.union([referenceZ, authorZ]),
-  body: z.array(blockZ.or(imageZ)).nullable(),
-  categories: z.array(referenceZ.or(categoryZ)).nullable(),
-  mainImage: mainImageZ.nullable(),
+  author: z.union([referenceZ, authorZ]).optional(),
+  body: z.array(blockZ.or(imageZ)).nullable().optional(),
+  categories: z.array(referenceZ.or(categoryZ)).nullable().optional(),
+  mainImage: mainImageZ.nullable().optional(),
   slug: slugZ.nullable(),
   title: z.string(),
   description: z.string().nullable(),

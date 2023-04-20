@@ -1,5 +1,5 @@
 <template>
-  <SanityContent :blocks="content[0].body" :serializers="serializers" />
+  <SanityContent :blocks="content.body" :serializers="serializers" />
 </template>
 
 <script lang="ts">
@@ -10,8 +10,8 @@
   export default {
     props: ['content'],
     setup(props) {
-      const blockContent = props.content;
-      const blocks = [blockContent];
+      const blocks = props.content;
+
       const serializers = {
         types: {
           image: Image,
