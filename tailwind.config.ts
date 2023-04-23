@@ -26,7 +26,7 @@ export default <Partial<Config>>{
         subtitle: 'var(--subtitle)',
         body: 'var(--body)',
       },
-      maxWidth: {
+      screens: {
         md: '900px',
       },
       keyframes: {

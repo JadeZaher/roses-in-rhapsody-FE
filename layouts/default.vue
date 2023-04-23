@@ -1,34 +1,21 @@
 <template>
   <div class="min-h-screen">
-    <header class="fixed w-full z-10 top-0 grid place-items-center">
+    <header
+      id="navbar"
+      class="fixed w-screen z-10 top-3 duration-300 grid place-items-center"
+    >
       <nav
-        class="p-4 flex items-center bg-white border-b-2 border-pink-300 justify-end items-between w-full"
+        class="p-2 flex justify-between rounded-xl shadow-xl bg-white border-2 border-pink-300 min-w-[90vw]"
       >
-        <div class="flex gap-5 md:gap-8">
-          <NuxtLink to="/" class="font-medium md:text-xl text-sm text-black"
-            >Home</NuxtLink
-          >
-          <NuxtLink
-            class="font-semibold md:text-xl text-sm text-black"
-            to="/about"
-            >About</NuxtLink
-          >
-          <NuxtLink
-            class="font-semibold md:text-xl text-sm text-black"
-            to="/about"
-            >Families</NuxtLink
-          >
-          <NuxtLink
-            class="font-semibold md:text-xl text-sm text-black"
-            to="/about"
-            >Partners</NuxtLink
-          >
-          <NuxtLink
-            class="font-semibold md:text-xl text-sm text-black"
-            to="/posts"
-            >Posts</NuxtLink
-          >
-        </div>
+        <button
+          ref="rootElement"
+          @click="handleBook"
+          class="bg-white rounded-md md:max-h-[60px] max-h-[40px] md:p-5 p-2 mr-5 border-pink-400 border-2 font-cursive text-black hover:text-white font-semibold text-sm md:text-body duration-200 hover:bg-gradientBase"
+        >
+          Book With Me
+        </button>
+        <PageLinksDesktop />
+        <PageLinksMobile />
       </nav>
     </header>
     <div class="flex flex-col justify-center max-w-screen overflow-hidden">
@@ -37,9 +24,29 @@
   </div>
 </template>
 
-<style scoped>
-  .router-link-exact-active {
-    text-shadow: -2px 2px 8px #ce42a64b;
-    @apply text-pink-300 font-black drop-shadow-glow;
-  }
-</style>
+<script setup>
+  //handle nav scroll
+
+  onMounted(() => {
+    if (process.client) {
+      var prevScrollpos = window.pageYOffset;
+      window.onscroll = function () {
+        var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+          document.getElementById('navbar').style.top = '10px';
+        } else {
+          document.getElementById('navbar').style.top = '-200px';
+        }
+        prevScrollpos = currentScrollPos;
+      };
+    }
+  });
+
+  //handle calendly
+  const calendly = useCalendly();
+  const handleBook = () => {
+    calendly.initPopupWidget({
+      url: 'https://calendly.com/roses-in-rhapsody/30min',
+    });
+  };
+</script>

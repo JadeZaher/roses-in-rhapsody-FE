@@ -1,22 +1,22 @@
 <template>
   <!-- hero -->
   <div
-    class="flex md:bg-gradientPinkDesktop bg-gradientPinkMobile min-h-[100vh] mt-10 bg-center bg-cover items-center overflow-clip w-[100vw] md:flex-row flex-col justify-between"
+    class="flex md:bg-gradientPinkDesktop bg-gradientPinkMobile h-[100vh] md:pt-0 bg-center bg-cover items-center overflow-clip w-[100vw] md:flex-row flex-col-reverse md:justify-between justify-center"
   >
     <div
-      class="sm:max-w-[100%] max-w-[90%] md:mt-0 mt-10 md:text-start sm:h-[60vh] flex flex-col justify-center text-center sm:ml-[12%] duration-200"
+      class="md:max-w-[100%] max-w-[90%] md:mt-0 md:text-start min-h-[30vh] flex flex-col justify-center text-center md:ml-[12%] duration-200"
     >
-      <h1 class="text-header font-cursive text-white font-black my-4">
+      <h1 class="text-header font-cursive text-white font-black">
         {{ title }}
       </h1>
       <h3
-        class="font-sans md:text-subtitle text-base leading-9 italic text-white font-medium my-2 w-full md:w-[80%]"
+        class="font-sans text-subtitle italic text-white font-medium my-4 w-full md:w-[80%]"
       >
         {{ subtitle }}
       </h3>
     </div>
     <div
-      class="sm:max-w-[40%] animate-fadeIn sm:h-[60vh] w-full flex items-center justify-center mr-[-5%] sm:mr-[5%] pointer-events-none"
+      class="md:max-w-[40%] animate-fadeIn min-h-[40vh] max-h-[40vh] w-full flex items-center justify-center mr-[-5%] md:mr-[5%] pointer-events-none"
     >
       <client-only>
         <Vue3Lottie
@@ -26,7 +26,7 @@
           :animationData="animation"
           :loop="false"
           :speed="0.8"
-          class="drop-shadow-glow md:translate-y-0 translate-y-[-10%]"
+          class="drop-shadow-glow md:translate-y-0"
         />
       </client-only>
     </div>

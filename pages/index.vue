@@ -1,26 +1,35 @@
 <template>
   <Hero
-    title="Roses In Rhapsody"
-    subtitle="Do something special. Show someone you love how much you care."
+    title="Do something special."
+    subtitle="Show someone you love how much you care with Roses In Rhapsody."
   />
   <!-- services -->
-  <div class="p-10 grid place-items-center">
-    <p
-      class="font-sans font-semibold text-center md:text-body text-base md:w-[80%]"
+  <div class="my-5 p-10 grid place-items-center">
+    <h2
+      class="font-cursive font-semibold text-header my-2 text-center max-w-[80%]"
     >
-      <span class="font-cursive text-body"
-        >Roses in Rhapsody is your event valet.</span
-      >
+      Roses in Rhapsody is your event valet.
+    </h2>
+    <p class="font-sans my-4 text-center text-body md:w-[60%]">
+      Roses In Rhapsody operates throughout the treasure valley. Serving clients
+      in Boise, Meridian, Eagle, Caldwell, Emmet, and tourists from out of town
+      in the area for their special moment. <br />
       <br />
+      We specialize in creating your dream space by decorating craft
+      environments and curating an unforgettable personal experiences. From
+      family events such as birthdays, to intimate moments like honeymoons and
+      anniversaries. <br />
       <br />
-      Creating your dream space by decorating craft environments and curating an
-      unforgettable personal experience.
+      Beyond this we, also provide support for wedding planers, and anyone
+      setting out to make personalized events, and partner with the best
+      hospitality service providers and restaurants to connect our clients with
+      everything they need.
     </p>
     <div
-      class="flex md:flex-row flex-col md:mt-5 mt-10 w-full md:py-10 justify-center"
+      class="flex md:flex-row flex-col w-full md:pt-10 justify-center items-center"
     >
       <div
-        class="relative md:m-10 md:mx-[2vw] m-5 grid place-items-center bg-gradientFamilies bg-cover bg-center rounded-2xl"
+        class="relative md:m-10 md:mx-[2vw] m-5 grid place-items-center w-fit bg-gradientPartners bg-center bg-cover rounded-2xl"
       >
         <h3
           class="absolute font-cursive text-center font-bold italic text-white text-shadow z-[2] md:text-body text-xs ml-[2%] mt-[10%]"
@@ -30,10 +39,14 @@
             Surprise and Amaze</span
           >
         </h3>
-        <img src="/Gallery_Frame.png" alt="" class="shadow-xl rounded-2xl" />
+        <img
+          src="/Gallery_Frame.png"
+          alt="Family Events"
+          class="shadow-xl rounded-2xl max-h-[50vh]"
+        />
       </div>
       <div
-        class="relative md:m-10 md:mx-[2vw] m-5 grid place-items-center from-transparent bg-gradientPartners bg-center bg-cover rounded-2xl"
+        class="relative md:m-10 md:mx-[2vw] m-5 grid place-items-center w-fit bg-gradientPartners bg-center bg-cover rounded-2xl"
       >
         <h3
           class="absolute font-cursive text-center font-bold italic text-white text-shadow z-[2] md:text-body text-xs ml-[2%] mt-[10%]"
@@ -46,14 +59,15 @@
         <img
           src="/Gallery_Frame.png"
           alt="Partners"
-          class="shadow-xl rounded-2xl"
+          class="shadow-xl rounded-2xl max-h-[50vh]"
         />
       </div>
     </div>
   </div>
+
   <!-- testimonials -->
   <div
-    class="p-10 flex justify-center items-center bg-gradientBase md:min-h-[30vh]"
+    class="p-10 py-5 flex justify-center items-center bg-gradientPinkMobile bg-right-bottom bg-cover min-h-[40vh]"
   >
     <carousel
       ref="carousel"
@@ -62,11 +76,12 @@
       :wrapAround="true"
       class="w-full h-full"
       :autoplay="2000"
+      :transition="1000"
       :pause-autoplay-on-hover="true"
     >
       <slide key="1">
         <h3
-          class="font-sans font-medium md:leading-10 md:text-body text-xs text-shadow text-center text-white max-w-[60vw] p-5"
+          class="font-sans bg-white rounded-xl min-h-[50%] flex items-center md:p-8 md:leading-10 font-medium text-body text-center text-black max-w-[80vw] md:max-w-[60vw] p-5"
         >
           “My parents just got to their hotel & wowza! My mom was so surprised &
           amazed. She called me and was tearful. You did hands down BEAUTIFUL
@@ -78,11 +93,11 @@
         </h3>
       </slide>
       <slide key="2">
-        <img src="/23.jpg" alt="" class="rounded-2xl max-w-[60vw]" />
+        <img src="/23.jpg" alt="" class="rounded-2xl max-w-[80vw]" />
       </slide>
       <slide key="3">
         <h3
-          class="font-sans font-medium md:leading-10 md:text-body text-xs text-shadow text-center text-white max-w-[60vw] p-5"
+          class="font-sans font-medium min-h-[50%] bg-white md:p-8 md:leading-10 flex items-center rounded-xl text-body text-center text-black max-w-[80vw] md:max-w-[60vw] p-5"
         >
           “I want all of my client's to have Destinee decorate. I suggest it to
           everyone and anyone. <br />
@@ -91,21 +106,21 @@
         </h3>
       </slide>
       <slide key="2">
-        <img src="/24.jpg" alt="" class="rounded-2xl max-w-[60vw]" />
+        <img src="/24.jpg" alt="" class="rounded-2xl max-w-[80vw]" />
       </slide>
 
       <template #addons>
         <navigation>
           <template #next>
             <span
-              class="text-black p-3 text-sm bg-white bg-opacity-60 drop-shadow-md rounded-md right-[-20px] absolute"
+              class="text-black p-3 text-header font-black bg-white drop-shadow-md rounded-md right-[20px] absolute invisible md:visible"
             >
               >>
             </span>
           </template>
           <template #prev>
             <span
-              class="text-black p-3 text-sm bg-white bg-opacity-60 drop-shadow-md rounded-md left-[-20px] absolute"
+              class="text-black p-3 text-header font-black bg-white drop-shadow-md rounded-md left-[20px] absolute invisible md:visible"
             >
               &lt;&lt;
             </span>
@@ -117,35 +132,36 @@
   </div>
 
   <!-- booking -->
-  <div class="min-h-[100vh] grid place-items-center">
+  <div class="grid place-items-center py-5 bg-pink-100 min-h-screen">
     <div
-      class="md:max-w-[80%] max-w-[80%] max-h-[90vh] p-2 flex md:flex-row flex-col justify-start items-center rounded-xl shadow-2xl bg-gradientBase"
+      class="rounded-xl shadow-2xl md:max-w-[60%] max-w-[80%] bg-gradientPinkMobile bg-cover bg-left-bottom"
     >
-      <div class="relative flex flex-col items-center md:max-w-[40%]">
-        <img
-          src="/destinee-image.jpg"
-          alt="Destinee Schriner and her family"
-          class="rounded-xl shadow-lg max-h-[45vh] md:max-h-full m-2 md:m-0"
-        />
-        <button
-          ref="rootElement"
-          @click="handleClick"
-          class="absolute bottom-5 m-2 bg-white rounded-md md:p-5 p-2 text-pink-400 hover:text-white font-semibold font-sans text-sm md:text-body duration-200 hover:drop-shadow-md hover:bg-gradientBase"
-        >
-          Book With Me
-        </button>
-      </div>
-      <div class="grid place-items-center">
+      <div
+        class="m-2 bg-white rounded-xl flex md:flex-row flex-col justify-start items-center"
+      >
+        <div class="mt-[2vw] md:mt-0 relative flex flex-col items-center p-2">
+          <img
+            src="/destinee-image.jpg"
+            alt="Destinee Schriner and her family"
+            class="rounded-xl shadow-md max-h-[40vh] md:max-h-[80vh]"
+          />
+          <button
+            ref="rootElement"
+            @click="handleClick"
+            class="absolute bottom-5 m-3 bg-white rounded-md md:p-5 p-2 border-pink-400 border-2 font-cursive text-black hover:text-white font-semibold text-sm md:text-body duration-200 hover:bg-gradientBase"
+          >
+            Book With Me
+          </button>
+        </div>
+
         <p
-          class="max-w-[70%] text-white font-medium text-xs md:text-subtitle md:leading-10 text-shadow m-[4vw] text-center md:text-left"
+          class="md:max-w-[50%] text-black font-sans font-medium text-body md:leading-10 m-[4vw] text-center md:text-left"
         >
-          Hi I’m Destinee. Dreams of romance have always stuck in my head ever
-          since I read my first Lisa Kleypas book, Again The Magic when I was
-          fourteen. <br />
-          <br />
-          I imagined my handsome prince would come and sweep me off my feet. And
-          when I turned 19, I got married to that prince. Then after a couple of
-          years, our princess was born, completing our family.
+          Hi! I’m Destinee Founder and Owner of Roses In Rhapsody. I'll be the
+          one facilitating operations for the event you have always dreamed of.
+          <br /><br />
+          To do that we need to have a quick 30 minute appointment where I learn
+          about you so I can deliver an experience beyond your expectations.
         </p>
       </div>
     </div>
@@ -206,5 +222,28 @@
   }
   .carousel__prev {
     left: -20px;
+  }
+
+  .carousel__slide--prev {
+    opacity: 0;
+    transform: rotateY(-20deg) scale(0.8);
+    transition: 2s;
+  }
+
+  .carousel__slide--next {
+    opacity: 0;
+    transform: rotateY(20deg) scale(0.8);
+    transition: 2s;
+  }
+  .carousel__slide--sliding {
+    transition: 2s;
+  }
+  .carousel__track {
+    transform-style: preserve-3d;
+  }
+  .carousel__slide--active ~ .carousel__slide {
+    opacity: 0.8;
+    transform: rotateY(20deg) scale(1);
+    transition: 2s;
   }
 </style>

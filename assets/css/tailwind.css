@@ -57,7 +57,7 @@
       hsl(0, 0%, 100%) 90%,
       rgb(255, 255, 255) 100%
     ),
-    url('~/background.jpg');
+    url('/background.jpg');
   --background-gradient-mobile: linear-gradient(
       55deg,
       hsl(0, 65%, 92%) 0%,
@@ -68,7 +68,7 @@
       hsl(0, 92%, 85%, 1) 90%,
       rgb(255, 233, 228) 100%
     ),
-    url('~/background.jpg');
+    url('/background.jpg');
 
   --background-gradient-families: linear-gradient(
       55deg,
@@ -80,7 +80,7 @@
       hsl(0, 0%, 100%) 90%,
       rgb(255, 255, 255) 100%
     ),
-    url('~/partners.jpg');
+    url('/partners.jpg');
   --background-gradient-partners: linear-gradient(
       55deg,
       hsl(0, 65%, 92%) 0%,
@@ -91,17 +91,17 @@
       hsl(0, 0%, 100%) 90%,
       rgb(255, 255, 255) 100%
     ),
-    url('~/families.jpg');
+    url('/families.jpg');
 
   --background-gradient-base: linear-gradient(
     55deg,
-    hsl(0, 55%, 87%) 0%,
-    hsla(0, 24%, 80%, 0.8) 19%,
-    hsla(343, 24%, 75%, 0.8) 33%,
-    hsla(335, 28%, 73%, 0.8) 49%,
-    hsl(323, 44%, 86%) 68%,
-    hsl(0, 100%, 89%) 90%,
-    rgb(255, 196, 196) 100%
+    hsl(0, 65%, 92%) 0%,
+    hsla(0, 17%, 60%, 0.8) 19%,
+    hsl(0, 47%, 82%, 0.8) 33%,
+    hsl(10, 80%, 84%, 0.8) 49%,
+    hsl(10, 45%, 86%, 1) 68%,
+    hsl(0, 92%, 85%, 1) 90%,
+    rgb(255, 233, 228) 100%
   );
 
   /* misc */
@@ -112,9 +112,9 @@
   /* fonts */
   --font-cursive: 'Cinzel Decorative', cursive;
   --font-sans: 'Montserrat', sans-serif;
-  --header: clamp(32px, calc(2rem + ((1vw - 7.68px) * 0.8681)), 42px);
-  --subtitle: clamp(28px, calc(1.125rem + ((1vw - 7.68px) * 0.3472)), 32px);
-  --body: clamp(18px, calc(1.125rem + ((1vw - 7.68px) * 0.3472)), 22px);
+  --header: clamp(32px, calc(2rem + ((1vw - 7.68px) * 0.8681)), 62px);
+  --subtitle: clamp(28px, calc(1.75rem + ((1vw - 8px) * 1.25)), 42px);
+  --body: clamp(16px, calc(1rem + ((1vw - 8px) * 0.5357)), 22px);
 }
 
 .text-shadow {
