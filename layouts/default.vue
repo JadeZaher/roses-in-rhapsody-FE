@@ -5,7 +5,7 @@
       class="fixed w-screen z-10 top-3 duration-300 grid place-items-center"
     >
       <nav
-        class="p-2 flex justify-between rounded-xl shadow-xl bg-white border-2 border-pink-300 min-w-[90vw]"
+        class="p-2 flex justify-between rounded-xl shadow-xl bg-white border-2 border-black min-w-[90vw]"
       >
         <button
           ref="rootElement"
@@ -33,9 +33,9 @@
       window.onscroll = function () {
         var currentScrollPos = window.pageYOffset;
         if (prevScrollpos > currentScrollPos) {
-          document.getElementById('navbar').style.top = '10px';
+          document.getElementById('navbar').style.top = '.75rem';
         } else {
-          document.getElementById('navbar').style.top = '-200px';
+          document.getElementById('navbar').style.top = '-20rem';
         }
         prevScrollpos = currentScrollPos;
       };

@@ -3,78 +3,17 @@
     title="Do something special."
     subtitle="Show someone you love how much you care with Roses In Rhapsody."
   />
-  <!-- services -->
-  <div class="my-5 p-10 grid place-items-center">
-    <h2
-      class="font-cursive font-semibold text-header my-2 text-center max-w-[80%]"
-    >
-      Roses in Rhapsody is your event valet.
-    </h2>
-    <p class="font-sans my-4 text-center text-body md:w-[60%]">
-      Roses In Rhapsody operates throughout the treasure valley. Serving clients
-      in Boise, Meridian, Eagle, Caldwell, Emmet, and tourists from out of town
-      in the area for their special moment. <br />
-      <br />
-      We specialize in creating your dream space by decorating craft
-      environments and curating an unforgettable personal experiences. From
-      family events such as birthdays, to intimate moments like honeymoons and
-      anniversaries. <br />
-      <br />
-      Beyond this we, also provide support for wedding planers, and anyone
-      setting out to make personalized events, and partner with the best
-      hospitality service providers and restaurants to connect our clients with
-      everything they need.
-    </p>
-    <div
-      class="flex md:flex-row flex-col w-full md:pt-10 justify-center items-center"
-    >
-      <div
-        class="relative md:m-10 md:mx-[2vw] m-5 grid place-items-center w-fit bg-gradientPartners bg-center bg-cover rounded-2xl"
-      >
-        <h3
-          class="absolute font-cursive text-center font-bold italic text-white text-shadow z-[2] md:text-body text-xs ml-[2%] mt-[10%]"
-        >
-          Family Events <br />
-          <span class="text-xs md:text-base font-sans font-normal max-w-[80%]">
-            Surprise and Amaze</span
-          >
-        </h3>
-        <img
-          src="/Gallery_Frame.png"
-          alt="Family Events"
-          class="shadow-xl rounded-2xl max-h-[50vh]"
-        />
-      </div>
-      <div
-        class="relative md:m-10 md:mx-[2vw] m-5 grid place-items-center w-fit bg-gradientPartners bg-center bg-cover rounded-2xl"
-      >
-        <h3
-          class="absolute font-cursive text-center font-bold italic text-white text-shadow z-[2] md:text-body text-xs ml-[2%] mt-[10%]"
-        >
-          Partners <br />
-          <span class="text-xs md:text-base font-sans font-normal">
-            Level Up Your Service</span
-          >
-        </h3>
-        <img
-          src="/Gallery_Frame.png"
-          alt="Partners"
-          class="shadow-xl rounded-2xl max-h-[50vh]"
-        />
-      </div>
-    </div>
-  </div>
-
   <!-- testimonials -->
   <div
-    class="p-10 py-5 flex justify-center items-center bg-gradientPinkMobile bg-right-bottom bg-cover min-h-[40vh]"
+    class="flex flex-col justify-center bg-black rounded-2xl pb-6 p-3 items-center bg-right-bottom bg-cover shadow-bottom mt-[-2vh]"
   >
+    <h2 class="font-cursive text-header py-3 text-white">Testimonials</h2>
     <carousel
       ref="carousel"
       v-model="currentSlide"
       :items-to-show="1"
       :wrapAround="true"
-      class="w-full h-full"
+      class="w-full h-full bg-rose-100 rounded-2xl py-4"
       :autoplay="2000"
       :transition="1000"
       :pause-autoplay-on-hover="true"
@@ -113,16 +52,16 @@
         <navigation>
           <template #next>
             <span
-              class="text-black p-3 text-header font-black bg-white drop-shadow-md rounded-md right-[20px] absolute invisible md:visible"
+              class="text-black p-3 text-header font-medium bg-white drop-shadow-md rounded-md right-[5vw] absolute md:visible italic invisible"
             >
-              >>
+              >
             </span>
           </template>
           <template #prev>
             <span
-              class="text-black p-3 text-header font-black bg-white drop-shadow-md rounded-md left-[20px] absolute invisible md:visible"
+              class="text-black p-3 text-header font-medium bg-white drop-shadow-md rounded-md left-[5vw] absolute md:visible italic invisible"
             >
-              &lt;&lt;
+              &lt;
             </span>
           </template>
         </navigation>
@@ -131,38 +70,119 @@
     </carousel>
   </div>
 
+  <div class="h-[38vh] bg-white my-3 grid place-items-center">
+    <h2 class="font-cursive font-semibold text-header text-center max-w-[80%]">
+      Roses in Rhapsody is your
+      <span class="text-pink-400 italic"> event valet.</span>
+    </h2>
+  </div>
+
+  <!-- services -->
+  <div class="rounded-t-2xl flex flex-col w-full bg-black p-3 pt-4 pb-10">
+    <div class="md:flex-row flex-col flex">
+      <!-- families service -->
+      <div
+        class="md:w-[80vw] p-[4vw] md:mr-4 md:mb-4 md:rounded-tl-2xl md:rounded-t-[0] rounded-t-2xl font-semibold font-sans md:text-left text-center bg-white text-body flex flex-col justify-center items-center"
+      >
+        <!-- copy -->
+        <p class="my-4 md:w-3/5">
+          We specialize in creating your dream space by decorating craft
+          environments and curating an unforgettable personal experiences. From
+          family events such as birthdays, to intimate moments like honeymoons
+          and anniversaries. <br />
+        </p>
+
+        <p class="my-4 md:w-3/5">
+          Roses In Rhapsody operates throughout the treasure valley. Serving
+          clients in Boise, Meridian, Eagle, Caldwell, Emmet, and tourists from
+          out of town in the area for their special moment. <br />
+        </p>
+      </div>
+      <!-- bg -->
+      <div
+        class="bg-gradientFamilies md:mb-4 md:rounded-tr-2xl rounded-b-2xl md:rounded-b-none bg-cover bg-center md:h-[60vh] h-[40vh] w-full grid place-items-center"
+      >
+        <h3
+          class="font-cursive p-2 px-4 border-2 border-white rounded-2xl text-center font-bold italic text-white hover:bg-white hover:border-pink-400 hover:text-pink-400 duration-500 cursor-pointer z-[2] text-subtitle"
+        >
+          Family Events <br />
+          <span class="text-body font-sans font-normal max-w-[80%]">
+            Surprise and Amaze</span
+          >
+        </h3>
+      </div>
+    </div>
+
+    <!-- partners service -->
+    <div class="md:flex-row flex-col-reverse flex">
+      <!-- bg -->
+      <div
+        class="bg-gradientPartners md:mt-4 md:rounded-bl-2xl md:rounded-b-none rounded-b-2xl bg-cover bg-center md:h-[60vh] h-[40vh] w-full grid place-items-center"
+      >
+        <h3
+          class="font-cursive p-2 px-4 border-2 border-white rounded-2xl text-center font-bold italic hover:bg-black cursor-pointer text-white hover:bg-white hover:border-pink-400 hover:text-pink-400 duration-500 z-[2] text-subtitle"
+        >
+          Partners <br />
+          <span class="text-body font-sans font-normal max-w-[80%]">
+            Level Up Your Service</span
+          >
+        </h3>
+      </div>
+      <div
+        class="md:w-[80vw] p-[5vw] md:ml-4 mt-4 md:rounded-br-2xl md:rounded-t-none rounded-t-2xl font-sans md:text-left text-center bg-white font-semibold text-body flex flex-col justify-center items-center"
+      >
+        <!-- copy -->
+        <p class="my-4 md:w-3/5">
+          Beyond this we, also provide support for wedding planers, and anyone
+          setting out to make personalized events.
+        </p>
+        <p class="my-4 md:w-3/5">
+          We partner with the best hospitality service providers and restaurants
+          to connect our clients with everything they need. Learn more about
+          partnership opportunities to take your events to a new level.
+        </p>
+      </div>
+    </div>
+  </div>
+
   <!-- booking -->
-  <div class="grid place-items-center py-5 bg-pink-100 min-h-screen">
+  <div class="bg-black p-3 mt-[-1px]">
     <div
-      class="rounded-xl shadow-2xl md:max-w-[60%] max-w-[80%] bg-gradientPinkMobile bg-cover bg-left-bottom"
+      class="grid place-items-center py-5 bg-[url('/RoccoWhite.jpg')] rounded-2xl mt-[-2vh] bg-cover bg-no-repeat bg-opacity-70 min-h-[98vh] shadow-top"
     >
       <div
-        class="m-2 bg-white rounded-xl flex md:flex-row flex-col justify-start items-center"
+        class="rounded-xl shadow-2xl md:max-w-[60%] max-w-[80%] bg-pink-100 bg-cover bg-left-bottom"
       >
-        <div class="mt-[2vw] md:mt-0 relative flex flex-col items-center p-2">
-          <img
-            src="/destinee-image.jpg"
-            alt="Destinee Schriner and her family"
-            class="rounded-xl shadow-md max-h-[40vh] md:max-h-[80vh]"
-          />
-          <button
-            ref="rootElement"
-            @click="handleClick"
-            class="absolute bottom-5 m-3 bg-white rounded-md md:p-5 p-2 border-pink-400 border-2 font-cursive text-black hover:text-white font-semibold text-sm md:text-body duration-200 hover:bg-gradientBase"
-          >
-            Book With Me
-          </button>
-        </div>
-
-        <p
-          class="md:max-w-[50%] text-black font-sans font-medium text-body md:leading-10 m-[4vw] text-center md:text-left"
+        <div
+          class="m-2 bg-white rounded-xl flex md:flex-row flex-col justify-start items-center"
         >
-          Hi! I’m Destinee Founder and Owner of Roses In Rhapsody. I'll be the
-          one facilitating operations for the event you have always dreamed of.
-          <br /><br />
-          To do that we need to have a quick 30 minute appointment where I learn
-          about you so I can deliver an experience beyond your expectations.
-        </p>
+          <div class="mt-[2vw] md:mt-0 relative flex flex-col items-center p-2">
+            <img
+              src="/destinee-image.jpg"
+              alt="Destinee Schriner and her family"
+              class="rounded-xl shadow-md max-h-[40vh] md:max-h-[80vh]"
+            />
+            <button
+              ref="rootElement"
+              @click="handleClick"
+              class="absolute bottom-5 m-3 bg-white rounded-md md:p-5 p-2 border-pink-400 border-2 font-cursive text-black hover:text-white font-semibold text-sm md:text-body duration-200 hover:bg-gradientBase"
+            >
+              Book With Me
+            </button>
+          </div>
+
+          <p
+            class="md:max-w-[50%] text-black font-sans font-medium text-body md:leading-10 m-[4vw] text-center md:text-left"
+          >
+            Hi! I’m Destinee Founder and Owner of Roses In Rhapsody. I'll be the
+            one facilitating operations for the event you have always dreamed
+            of.
+            <br /><br />
+            To do that we need to have a quick 30 minute appointment where I
+            learn about you so I can deliver an experience beyond your
+            expectations.
+          </p>
+        </div>
       </div>
     </div>
   </div>
@@ -204,17 +224,17 @@
     display: block;
     content: '';
     width: 12px;
-    height: 2px;
+    height: 5px;
     border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.212);
+    background-color: rgba(112, 112, 112, 0.212);
   }
   .carousel__pagination-button--active::after {
     display: block;
     content: '';
     width: 12px;
-    height: 2px;
+    height: 5px;
     border-radius: 5px;
-    background-color: white;
+    background-color: black;
   }
 
   .carousel__next {

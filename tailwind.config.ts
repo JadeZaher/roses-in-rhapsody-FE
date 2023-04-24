@@ -13,8 +13,8 @@ export default <Partial<Config>>{
       },
       dropShadow: {
         glow: [
-          '-2mm -2mm 3mm rgba(247, 204, 204, 0.53)',
-          '2mm 2mm 3mm rgb(255, 255, 255)',
+          '-1mm -1mm 1mm rgba(247, 204, 204, 0.53)',
+          '1mm 1mm 2mm rgb(255, 255, 255)',
         ],
       },
       fontFamily: {

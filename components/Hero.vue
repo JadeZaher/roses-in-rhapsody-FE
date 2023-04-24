@@ -1,12 +1,14 @@
 <template>
   <!-- hero -->
   <div
-    class="flex md:bg-gradientPinkDesktop bg-gradientPinkMobile h-[100vh] md:pt-0 bg-center bg-cover items-center overflow-clip w-[100vw] md:flex-row flex-col-reverse md:justify-between justify-center"
+    class="flex bg-gradientPinkDesktop h-[105vh] md:pt-0 bg-center bg-cover items-center overflow-clip w-[100vw] md:flex-row flex-col-reverse md:justify-between justify-center"
   >
     <div
       class="md:max-w-[100%] max-w-[90%] md:mt-0 md:text-start min-h-[30vh] flex flex-col justify-center text-center md:ml-[12%] duration-200"
     >
-      <h1 class="text-header font-cursive text-white font-black">
+      <h1
+        class="md:text-6xl text-4xl font-cursive drop-shadow-glow text-white italic font-black"
+      >
         {{ title }}
       </h1>
       <h3
