@@ -4,7 +4,7 @@
     class="flex bg-gradientPinkDesktop h-[105vh] md:pt-0 bg-center bg-cover items-center overflow-clip w-[100vw] md:flex-row flex-col-reverse md:justify-between justify-center"
   >
     <div
-      class="md:max-w-[100%] max-w-[90%] md:mt-0 md:text-start min-h-[30vh] flex flex-col justify-center text-center md:ml-[12%] duration-200"
+      class="md:max-w-[100%] max-w-[90%] md:text-start min-h-[30vh] flex flex-col justify-center text-center md:ml-[12%] duration-200"
     >
       <h1
         class="md:text-6xl text-4xl font-cursive drop-shadow-glow text-white italic font-black"
@@ -12,14 +12,20 @@
         {{ title }}
       </h1>
       <h3
-        class="font-sans text-subtitle italic text-white font-medium my-4 w-full md:w-[80%]"
+        class="font-sans font-bold text-subtitle italic text-white my-4 w-full md:w-[80%]"
       >
         {{ subtitle }}
       </h3>
     </div>
     <div
-      class="md:max-w-[40%] animate-fadeIn min-h-[40vh] max-h-[40vh] w-full flex items-center justify-center mr-[-5%] md:mr-[5%] pointer-events-none"
+      class="md:max-w-[40%] animate-fadeIn min-h-[40vh] max-h-[40vh] my-[5vh] w-full flex items-center justify-center mr-[-5%] md:mr-[5%] pointer-events-none"
     >
+      <img
+        v-if="heroImage"
+        :src="heroImage"
+        class="max-w-[60%] md:max-w-[45%] mr-[5%] rounded-2xl md:p-2 p-[5px] border-2 border-pink-400 bg-white"
+      />
+
       <client-only>
         <Vue3Lottie
           ref="anim"
@@ -29,6 +35,7 @@
           :loop="false"
           :speed="0.8"
           class="drop-shadow-glow md:translate-y-0"
+          v-if="!heroImage"
         />
       </client-only>
     </div>
@@ -37,5 +44,9 @@
 
 <script setup>
   import animation from '/assets/roses_lottie.json';
-  const { title, subtitle } = defineProps(['title', 'subtitle']);
+  const { title, subtitle, heroImage } = defineProps([
+    'title',
+    'subtitle',
+    'heroImage',
+  ]);
 </script>

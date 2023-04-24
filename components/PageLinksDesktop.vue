@@ -12,8 +12,8 @@
     <NuxtLink class="font-semibold md:text-xl text-sm text-black" to="/about"
       >Partners</NuxtLink
     >
-    <NuxtLink class="font-semibold md:text-xl text-sm text-black" to="/posts"
-      >Posts</NuxtLink
+    <NuxtLink class="font-semibold md:text-xl text-sm text-black" to="/blog"
+      >Blog</NuxtLink
     >
   </div>
 </template>

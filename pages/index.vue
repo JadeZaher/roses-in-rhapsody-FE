@@ -87,7 +87,7 @@
         <!-- copy -->
         <p class="my-4 md:w-3/5">
           We specialize in creating your dream space by decorating craft
-          environments and curating an unforgettable personal experiences. From
+          environments and curating unforgettable personal experiences. From
           family events such as birthdays, to intimate moments like honeymoons
           and anniversaries. <br />
         </p>
@@ -120,7 +120,7 @@
         class="bg-gradientPartners md:mt-4 md:rounded-bl-2xl md:rounded-b-none rounded-b-2xl bg-cover bg-center md:h-[60vh] h-[40vh] w-full grid place-items-center"
       >
         <h3
-          class="font-cursive p-2 px-4 border-2 border-white rounded-2xl text-center font-bold italic hover:bg-black cursor-pointer text-white hover:bg-white hover:border-pink-400 hover:text-pink-400 duration-500 z-[2] text-subtitle"
+          class="font-cursive p-2 px-4 border-2 border-white rounded-2xl text-center font-bold italic cursor-pointer text-white hover:bg-white hover:border-pink-400 hover:text-pink-400 duration-500 z-[2] text-subtitle"
         >
           Partners <br />
           <span class="text-body font-sans font-normal max-w-[80%]">
@@ -172,15 +172,15 @@
           </div>
 
           <p
-            class="md:max-w-[50%] text-black font-sans font-medium text-body md:leading-10 m-[4vw] text-center md:text-left"
+            class="md:max-w-[50%] text-black font-sans font-bold text-body md:leading-10 m-[4vw] text-center md:text-left"
           >
-            Hi! I’m Destinee Founder and Owner of Roses In Rhapsody. I'll be the
-            one facilitating operations for the event you have always dreamed
-            of.
+            Hi, I’m Destinee Schriner! Founder and Owner of Roses In Rhapsody.
+            I'll be the one facilitating operations for the event you have
+            always dreamed of.
             <br /><br />
-            To do that we need to have a quick 30 minute appointment where I
-            learn about you so I can deliver an experience beyond your
-            expectations.
+            To do that we, need to have a quick 15 minute appointment. I will
+            learn about your likes and dislikes so I can deliver the most
+            perfect experience.
           </p>
         </div>
       </div>
@@ -196,7 +196,7 @@
   const calendly = useCalendly();
   const handleClick = () => {
     calendly.initPopupWidget({
-      url: 'https://calendly.com/roses-in-rhapsody/30min',
+      url: 'https://calendly.com/roses-in-rhapsody/15min',
     });
   };
 </script>

@@ -28,8 +28,8 @@
       <NuxtLink class="font-semibold text-header text-black" to="/about"
         >Partners</NuxtLink
       >
-      <NuxtLink class="font-semibold text-header text-black" to="/posts"
-        >Posts</NuxtLink
+      <NuxtLink class="font-semibold text-header text-black" to="/blog"
+        >blog</NuxtLink
       >
     </div>
   </div>

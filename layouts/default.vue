@@ -46,7 +46,7 @@
   const calendly = useCalendly();
   const handleBook = () => {
     calendly.initPopupWidget({
-      url: 'https://calendly.com/roses-in-rhapsody/30min',
+      url: 'https://calendly.com/roses-in-rhapsody/15min',
     });
   };
 </script>
