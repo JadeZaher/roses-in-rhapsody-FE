@@ -73,7 +73,7 @@
   <div class="h-[38vh] bg-white my-3 grid place-items-center">
     <h2 class="font-cursive font-semibold text-header text-center max-w-[80%]">
       Roses in Rhapsody is your
-      <span class="text-pink-400 italic"> event valet.</span>
+      <span class="text-pink-200 italic"> event valet.</span>
     </h2>
   </div>
 
@@ -103,7 +103,7 @@
         class="bg-gradientFamilies md:mb-4 md:rounded-tr-2xl rounded-b-2xl md:rounded-b-none bg-cover bg-center md:h-[60vh] h-[40vh] w-full grid place-items-center"
       >
         <h3
-          class="font-cursive p-2 px-4 border-2 border-white rounded-2xl text-center font-bold italic text-white hover:bg-white hover:border-pink-400 hover:text-pink-400 duration-500 cursor-pointer z-[2] text-subtitle"
+          class="font-cursive p-2 px-4 border-2 border-white rounded-2xl text-center font-bold italic text-white hover:bg-[url('/RoccoPink.jpg')] hover:border-black hover:text-black duration-500 cursor-pointer z-[2] text-subtitle"
         >
           Family Events <br />
           <span class="text-body font-sans font-normal max-w-[80%]">
@@ -120,7 +120,7 @@
         class="bg-gradientPartners md:mt-4 md:rounded-bl-2xl md:rounded-b-none rounded-b-2xl bg-cover bg-center md:h-[60vh] h-[40vh] w-full grid place-items-center"
       >
         <h3
-          class="font-cursive p-2 px-4 border-2 border-white rounded-2xl text-center font-bold italic cursor-pointer text-white hover:bg-white hover:border-pink-400 hover:text-pink-400 duration-500 z-[2] text-subtitle"
+          class="font-cursive p-2 px-4 border-2 border-white rounded-2xl text-center font-bold italic cursor-pointer text-white hover:bg-[url('/RoccoPink.jpg')] hover:border-black hover:text-black duration-500 z-[2] text-subtitle"
         >
           Partners <br />
           <span class="text-body font-sans font-normal max-w-[80%]">
@@ -165,7 +165,7 @@
             <button
               ref="rootElement"
               @click="handleClick"
-              class="absolute bottom-5 m-3 bg-white rounded-md md:p-5 p-2 border-pink-400 border-2 font-cursive text-black hover:text-white font-semibold text-sm md:text-body duration-200 hover:bg-gradientBase"
+              class="absolute bottom-5 m-3 bg-white rounded-md md:p-5 p-2 hover:border-black border-rose-100 border-2 font-cursive text-black font-semibold text-sm md:text-body duration-200 hover:bg-[url('/RoccoPink.jpg')]"
             >
               Book With Me
             </button>

@@ -10,7 +10,7 @@
         <button
           ref="rootElement"
           @click="handleBook"
-          class="bg-white rounded-md md:max-h-[60px] max-h-[40px] md:p-5 p-2 mr-5 border-pink-400 border-2 font-cursive text-black hover:text-white font-semibold text-sm md:text-body duration-200 hover:bg-gradientBase"
+          class="bg-white rounded-md md:max-h-[60px] max-h-[40px] md:p-5 p-2 mr-5 border-rose-100 hover:border-black border-2 font-cursive text-black font-semibold text-sm md:text-body duration-200 hover:bg-[url('RoccoPink.jpg')]"
         >
           Book With Me
         </button>
