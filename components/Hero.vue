@@ -4,18 +4,19 @@
     class="flex bg-[url('/RoccoPink.jpg')] bg-no-repeat h-[105vh] md:pt-0 bg-center bg-cover items-center overflow-clip w-[100vw] md:flex-row flex-col-reverse md:justify-between justify-center"
   >
     <div
-      class="md:max-w-[100%] max-w-[90%] md:text-start p-[2vw] rounded-3xl min-h-[30vh] flex flex-col justify-center text-center md:ml-[12%] duration-200"
+      class="md:max-w-fit max-w-[90%] md:text-start md:p-[4em] p-[1em] text-center drop-shadow-glow rounded-3xl h-fit grid md:place-items-start place-items-center bg-white md:ml-[12%] mx-[4%] duration-200"
     >
       <h1
-        class="md:text-6xl text-4xl font-cursive text-white text-shadow italic font-black"
+        class="md:text-6xl text-header font-cursive text-black italic font-black"
       >
         {{ title }}
       </h1>
-      <h3
-        class="font-sans font-bold text-subtitle italic text-white text-shadow my-4 w-full md:w-[80%]"
+      <h2
+        v-show="subtitle"
+        class="font-sans font-semibold text-subtitle mt-[.7em] md:leading-[1.3em] italic text-rose-200"
       >
         {{ subtitle }}
-      </h3>
+      </h2>
     </div>
     <div
       class="md:max-w-[40%] min-h-[40vh] max-h-[40vh] my-[5vh] w-full flex items-center justify-center mr-[-5%] md:mr-[5%] pointer-events-none"

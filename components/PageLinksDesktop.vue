@@ -6,10 +6,10 @@
     <NuxtLink class="font-semibold md:text-xl text-sm text-black" to="/about"
       >About</NuxtLink
     >
-    <NuxtLink class="font-semibold md:text-xl text-sm text-black" to="/about"
+    <NuxtLink class="font-semibold md:text-xl text-sm text-black" to="/families"
       >Families</NuxtLink
     >
-    <NuxtLink class="font-semibold md:text-xl text-sm text-black" to="/about"
+    <NuxtLink class="font-semibold md:text-xl text-sm text-black" to="/partners"
       >Partners</NuxtLink
     >
     <NuxtLink class="font-semibold md:text-xl text-sm text-black" to="/blog"
@@ -19,6 +19,6 @@
 </template>
 <style scoped>
   .router-link-exact-active {
-    @apply font-black drop-shadow-glow;
+    @apply text-rose-200 font-black;
   }
 </style>

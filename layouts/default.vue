@@ -2,7 +2,7 @@
   <div class="min-h-screen">
     <header
       id="navbar"
-      class="fixed w-screen z-10 top-3 duration-300 grid place-items-center"
+      class="fixed w-screen z-10 top-[1.5rem] duration-300 grid place-items-center"
     >
       <nav
         class="p-2 flex justify-between rounded-xl shadow-xl bg-white border-2 border-black min-w-[90vw]"
@@ -10,7 +10,7 @@
         <button
           ref="rootElement"
           @click="handleBook"
-          class="bg-white rounded-md md:max-h-[60px] max-h-[40px] md:p-5 p-2 mr-5 border-rose-100 hover:border-black border-2 font-cursive text-black font-semibold text-sm md:text-body duration-200 hover:bg-[url('RoccoPink.jpg')]"
+          class="bg-white rounded-md md:max-h-[60px] max-h-[40px] md:p-5 p-2 mr-5 border-rose-200 hover:border-black border-2 font-cursive text-black font-semibold text-sm md:text-body duration-200 hover:bg-[url('RoccoPink.jpg')]"
         >
           Book With Me
         </button>
@@ -33,7 +33,7 @@
       window.onscroll = function () {
         var currentScrollPos = window.pageYOffset;
         if (prevScrollpos > currentScrollPos) {
-          document.getElementById('navbar').style.top = '.75rem';
+          document.getElementById('navbar').style.top = '2.5vh';
         } else {
           document.getElementById('navbar').style.top = '-20rem';
         }

@@ -93,10 +93,11 @@
   --font-cursive: 'Cinzel Decorative', cursive;
   --font-sans: 'Montserrat', sans-serif;
   --header: clamp(32px, calc(2rem + ((1vw - 7.68px) * 0.8681)), 62px);
-  --subtitle: clamp(28px, calc(1.75rem + ((1vw - 8px) * 1.25)), 42px);
+  --subtitle: clamp(24px, calc(1.75rem + ((1vw - 8px) * 1.25)), 42px);
   --body: clamp(16px, calc(1rem + ((1vw - 8px) * 0.5357)), 22px);
 }
 
 .text-shadow {
-  text-shadow: 0 1px 1vh rgb(104, 70, 99);
+  text-shadow: -0.1rem -0.1rem 0.5vh hsl(var(--shadow-color) / 0.4),
+    0.2vh 0.2rem 0.2rem rgb(243, 243, 243);
 }

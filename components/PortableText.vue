@@ -27,19 +27,19 @@
             class: 'py-10 text-5xl font-black ',
           }),
           h2: h('h2', {
-            class: 'py-10 text-4xl font-bold',
+            class: 'py-10 text-subtitle font-bold',
           }),
           h3: h('h3', {
-            class: 'py-10 text-3xl font-bold',
+            class: 'py-10 text-xl font-bold',
           }),
           h4: h('h4', {
-            class: 'py-10 text-2xl font-bold',
+            class: 'py-10 text-l font-bold',
           }),
           normal: h('p', {
-            class: 'py-2 text-l font-normal',
+            class: 'py-2 text-body',
           }),
           blockquote: h('blockquote', {
-            class: 'my-5 border-l-4 border-l-primary py-5 pl-5',
+            class: 'my-5 text-subtitle border-l-4 border-l-primary p-5 ',
           }),
         },
         listItem: ListItem,

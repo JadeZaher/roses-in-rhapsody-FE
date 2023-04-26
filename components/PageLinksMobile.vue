@@ -35,14 +35,14 @@
   </div>
   <div
     @click="handleShowLinks"
-    class="w-[40px] h-[40px] p-1 border-2 border-rose-100 cursor-pointer rounded-md md:hidden grid place-items-center"
+    class="w-[40px] h-[40px] p-1 border-2 border-rose-200 cursor-pointer rounded-md md:hidden grid place-items-center"
   >
     <div
-      class="bg-rose-100 w-[80%] h-[2px] rounded-md duration-300"
+      class="bg-black w-[80%] h-[2px] rounded-md duration-300"
       :class="[state.showLinks ? ' rotate-45 translate-y-[8px] ' : '']"
     />
     <div
-      class="bg-rose-100 w-[80%] h-[2px] rounded-md duration-300"
+      class="bg-black w-[80%] h-[2px] rounded-md duration-300"
       :class="[state.showLinks ? 'rotate-[-45deg]  translate-y-[-6px] ' : '']"
     />
   </div>
@@ -76,6 +76,6 @@
 
 <style scoped>
   .router-link-exact-active {
-    @apply text-rose-100 font-black;
+    @apply text-rose-200 font-black;
   }
 </style>
