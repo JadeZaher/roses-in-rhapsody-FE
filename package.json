@@ -19,6 +19,7 @@
     "@sanity/image-url": "^1.0.2",
     "lottie-web-vue": "^1.2.1",
     "sanity-blocks-vue-component": "^1.0.1",
+    "vue-fixed-size-accordion": "^1.1.2",
     "vue3-carousel": "^0.3.0",
     "vue3-lottie": "^2.5.0",
     "zod": "^3.21.4"

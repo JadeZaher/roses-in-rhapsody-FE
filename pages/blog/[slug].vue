@@ -1,13 +1,15 @@
 <template>
   <div
-    class="md:py-[10%] py-[15%] min-h-screen bg-cover bg-[url('/RoccoPink.jpg')] grid place-items-center"
+    class="md:py-[10vh] py-[15vh] min-h-screen w-full bg-cover bg-[url('/RoccoPink.jpg')] grid place-items-center"
   >
     <div
-      class="relative min-w-[90vw] mx-[8%] bg-white border-2 border-black p-[2vw] rounded-2xl shadow-lg"
+      class="w-[90vw] bg-white border-2 border-black p-[2vw] rounded-2xl shadow-lg"
     >
-      <h1 class="font-black text-header text-pink-200">{{ post?.title }}</h1>
+      <h1 class="p-2 font-black text-header text-pink-200">
+        {{ post?.title }}
+      </h1>
       <h2
-        class="font-semibold text-subtitle text-black pb-5 border-b-2 border-b-black"
+        class="p-2 font-semibold text-subtitle text-black pb-5 border-b-2 border-b-black"
       >
         {{ post?.description }}
       </h2>

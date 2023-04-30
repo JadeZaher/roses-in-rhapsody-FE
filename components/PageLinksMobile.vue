@@ -3,7 +3,7 @@
     class="grid place-items-center duration-500 md:hidden bg-white"
     :class="[
       state.showLinks
-        ? ' h-[95vh]  opacity-100 '
+        ? ' h-[90vh]  opacity-100 '
         : ' w-0 h-[0vh] pointer-events-none  opacity-0',
     ]"
   >
@@ -11,7 +11,7 @@
       class="delay-500"
       :class="[
         state.showLinks
-          ? ' flex flex-col h-full w-4/5 gap-[6vh] justify-center duration-500 translate-x-[-35vw]  opacity-100 '
+          ? ' flex flex-col h-full w-4/5 absolute gap-[6vh] justify-center duration-500 translate-x-[-8%]  opacity-100 '
           : ' w-[0%] h-[0%] absolute pointer-events-none  delay-[-600ms] opacity-0 ',
       ]"
       @click="handleShowLinks"
@@ -22,14 +22,14 @@
       <NuxtLink class="font-semibold text-header text-black" to="/about"
         >About</NuxtLink
       >
-      <NuxtLink class="font-semibold text-header text-black" to="/about"
+      <NuxtLink class="font-semibold text-header text-black" to="/families"
         >Families</NuxtLink
       >
-      <NuxtLink class="font-semibold text-header text-black" to="/about"
+      <NuxtLink class="font-semibold text-header text-black" to="/partners"
         >Partners</NuxtLink
       >
       <NuxtLink class="font-semibold text-header text-black" to="/blog"
-        >blog</NuxtLink
+        >Blog</NuxtLink
       >
     </div>
   </div>
@@ -48,9 +48,13 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
   import { reactive } from 'vue';
-  const state = reactive({ showLinks: false });
+  interface ManageState {
+    showLinks: boolean;
+  }
+
+  const state: ManageState = reactive({ showLinks: false });
 
   const handleShowLinks = () => {
     state.showLinks = !state.showLinks;
@@ -58,14 +62,14 @@
 
   onMounted(() => {
     if (process.client) {
-      var prevScrollpos = window.pageYOffset;
+      var prevScrollpos = window.scrollY;
       window.onscroll = function () {
-        var currentScrollPos = window.pageYOffset;
+        var currentScrollPos = window.scrollY;
         if (prevScrollpos > currentScrollPos) {
-          document.getElementById('navbar').style.top = '.75rem';
+          document.getElementById('navbar')!.style.top = '.75rem';
           state.showLinks = false;
         } else {
-          document.getElementById('navbar').style.top = '-20rem';
+          document.getElementById('navbar')!.style.top = '-20rem';
           state.showLinks = false;
         }
         prevScrollpos = currentScrollPos;

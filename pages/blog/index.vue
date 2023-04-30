@@ -1,6 +1,6 @@
 <template>
   <div
-    class="min-h-screen md:pt-[5vh] bg-[url('/RoccoWhite.jpg')] bg-blend-color-burn bg-cover pt-[10vh] grid place-items-center"
+    class="min-h-screen w-full md:pt-[5vh] bg-[url('/RoccoWhite.jpg')] bg-blend-color-burn bg-cover pt-[10vh] grid place-items-center"
   >
     <div
       class="mx-[8%] min-w-[90vw] bg-white border-2 border-black rounded-2xl md:p-10 p-4"

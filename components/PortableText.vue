@@ -1,17 +1,19 @@
 <template>
-  <SanityContent :blocks="content.body" :serializers="serializers" />
+  <div class="p-2">
+    <SanityContent :blocks="content.body" :serializers="serializers" />
+  </div>
 </template>
 
 <script lang="ts">
   import Image from '~/components/BlockTextSerializers/Image.vue';
   import ListItem from '~/components/BlockTextSerializers/ListItem.vue';
   import { h } from 'vue';
+  import type { PropType } from 'vue';
 
   export default {
-    props: ['content'],
+    props: { content: { type: Object as PropType<Posts>, required: true } },
     setup(props) {
       const blocks = props.content;
-
       const serializers = {
         types: {
           image: Image,

@@ -4,7 +4,7 @@
     class="flex bg-[url('/RoccoPink.jpg')] bg-no-repeat h-[105vh] md:pt-0 bg-center bg-cover items-center overflow-clip w-[100vw] md:flex-row flex-col-reverse md:justify-between justify-center"
   >
     <div
-      class="md:max-w-fit max-w-[90%] md:text-start md:p-[4em] p-[1em] text-center drop-shadow-glow rounded-3xl h-fit grid md:place-items-start place-items-center bg-white md:ml-[12%] mx-[4%] duration-200"
+      class="max-w-[90vw] md:text-start md:p-[4em] p-[1em] text-center drop-shadow-glow rounded-3xl h-fit grid place-items-center bg-white md:ml-[12%] mx-[4%] duration-200"
     >
       <h1
         class="md:text-6xl text-header font-cursive text-black italic font-black"
@@ -13,7 +13,7 @@
       </h1>
       <h2
         v-show="subtitle"
-        class="font-sans font-semibold text-subtitle mt-[.7em] md:leading-[1.3em] italic text-rose-200"
+        class="font-sans md:w-full w-4/5 font-semibold text-body md:text-subtitle mt-[.7em] md:leading-[1.3em] italic text-black"
       >
         {{ subtitle }}
       </h2>
@@ -24,7 +24,7 @@
       <img
         v-if="heroImage"
         :src="heroImage"
-        class="max-w-[60%] md:max-w-[45%] mr-[5%] rounded-2xl md:p-2 p-[5px] border-2 border-black bg-white"
+        class="max-w-[90vw] md:max-w-[45%] max-h-[40vh] mr-[5%] rounded-2xl md:p-2 p-[5px] border-2 border-black bg-white"
       />
 
       <client-only>
