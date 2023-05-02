@@ -137,107 +137,47 @@
             <h2 class="font-black text-subtitle p-2 text-black font-cursive">
               FAQ
             </h2>
-            <!-- faq 1  -->
-            <fixed-size-accordion :open="state.isOpened1">
-              <template v-slot:topBar>
-                <div>
-                  <div
-                    class="visible-header bg-black cursor-pointer border-white border-y-2 flex rounded-t-2xl"
-                    @click="state.isOpened1 = !state.isOpened1"
-                  >
-                    <h3
-                      class="text-white font-semibold text-left text-body font-sans p-2 w-4/5"
-                    >
-                      Why should I invest in this service, I can do it myself?
-                    </h3>
-                    <img
-                      src="/Drop.svg"
-                      alt=""
-                      class="w-1/5 bg-transparent invert md:p-6 p-2 scale-50"
-                      :class="[
-                        state.isOpened1
-                          ? 'duration-200'
-                          : 'duration-200 rotate-90',
-                      ]"
-                    />
-                  </div>
-                  <div v-if="state.isOpened1">
-                    <p class="p-2 text-body text-white bg-black">
-                      Of course you can do it yourself but we make it so that
-                      it’s one more thing you don’t have to worry about.
-                    </p>
-                  </div>
-                </div>
-              </template>
-            </fixed-size-accordion>
-            <!-- faq 2  -->
-            <fixed-size-accordion :open="state.isOpened2">
-              <template v-slot:topBar>
-                <div>
-                  <div
-                    class="visible-header bg-black cursor-pointer border-white border-y-2 flex"
-                    @click="state.isOpened2 = !state.isOpened2"
-                  >
-                    <h3
-                      class="text-white font-semibold text-left text-body font-sans p-2 w-4/5"
-                    >
-                      Can the price be lower?
-                    </h3>
-                    <img
-                      src="/Drop.svg"
-                      alt=""
-                      class="w-1/5 bg-transparent invert md:p-6 p-2 scale-50"
-                      :class="[
-                        state.isOpened2
-                          ? 'duration-200'
-                          : 'duration-200 rotate-90',
-                      ]"
-                    />
-                  </div>
-                  <div v-if="state.isOpened2">
-                    <p class="p-2 text-body text-white bg-black">
-                      We cater to all clients with our payment plans and we can
-                      customize around your budget.
-                    </p>
-                  </div>
-                </div>
-              </template>
-            </fixed-size-accordion>
-            <!-- faq 3  -->
+
             <fixed-size-accordion
-              :open="state.isOpened3"
+              v-for="(faqItem, faqIndex) of faqItems"
+              :open="faqItem.isOpen.value"
+              :top-bar-id="`faq-${faqIndex}-top`"
+              :bottom-bar-id="`faq-${faqIndex}-bottom`"
               :animation-duration="500"
             >
-              <template v-slot:topBar>
-                <div>
+              <template #topBar>
+                <div
+                  :class="`overflow-hidden ${roundListTopBottom(
+                    faqIndex,
+                    faqItems
+                  )}`"
+                >
                   <div
-                    class="visible-header bg-black cursor-pointer border-white border-y-2 flex rounded-b-2xl"
-                    @click="state.isOpened3 = !state.isOpened3"
-                    :class="[state.isOpened3 ? 'rounded-b-none' : '']"
+                    :class="`visible-header bg-black cursor-pointer border-white border-y-2 flex ${noTopBottomListBorder(
+                      faqIndex,
+                      faqItems
+                    )}`"
+                    @click="faqItem.isOpen.value = !faqItem.isOpen.value"
                   >
                     <h3
                       class="text-white font-semibold text-left text-body font-sans p-2 w-4/5"
                     >
-                      Are you good at this?
+                      {{ faqItem.question }}
                     </h3>
                     <img
                       src="/Drop.svg"
                       alt=""
                       class="w-1/5 bg-transparent invert md:p-6 p-2 scale-50"
                       :class="[
-                        state.isOpened3
+                        faqItem.isOpen.value
                           ? 'duration-200'
                           : 'duration-200 rotate-90',
                       ]"
                     />
                   </div>
-                  <div v-if="state.isOpened3">
-                    <p class="p-2 text-body text-white bg-black rounded-b-2xl">
-                      I pride myself in my customer service as I had worked in
-                      the field for over ten years. With that being said, I will
-                      curate an experience that you can cherish. And please feel
-                      free to look at the pictures and reviews and judge for
-                      yourself on our quality.
+                  <div v-if="faqItem.isOpen.value">
+                    <p class="p-2 text-body text-white bg-black">
+                      {{ faqItem.answer }}
                     </p>
                   </div>
                 </div>
@@ -286,46 +226,79 @@
 </template>
 
 <script setup lang="ts">
-  //handle nav scroll
-  import FixedSizeAccordion from 'vue-fixed-size-accordion';
-  interface ManageState {
-    isOpened1: boolean;
-    isOpened2: boolean;
-    isOpened3: boolean;
+//handle nav scroll
+import FixedSizeAccordion from "vue-fixed-size-accordion";
+
+type FAQ = {
+  question: string;
+  answer: string;
+  isOpen: Ref<boolean>;
+};
+
+const faqItems: Array<FAQ> = [
+  {
+    question: "Why should I invest in this service, I can do it myself?",
+    answer:
+      "Of course you can do it yourself but we make it so that it’s one more thing you don’t have to worry about.",
+    isOpen: ref(false),
+  },
+  {
+    question: "Can the price be lower?",
+    answer:
+      "We cater to all clients with our payment plans and we can customize around your budget.",
+    isOpen: ref(false),
+  },
+  {
+    question: "Are you good at this?",
+    answer:
+      "I pride myself in my customer service as I had worked in the field for over ten years. With that being said, I will curate an experience that you can cherish. And please feel free to look at the pictures and reviews and judge for yourself on our quality.",
+    isOpen: ref(false),
+  },
+];
+
+function roundListTopBottom(anIndex: number, anArray: Array<any>) {
+  if (anIndex === 0) {
+    return "rounded-t-2xl";
   }
+  if (anIndex + 1 === anArray.length) {
+    return "rounded-b-2xl";
+  }
+}
+function noTopBottomListBorder(anIndex: number, anArray: Array<any>) {
+  if (anIndex === 0) {
+    return "border-t-0";
+  }
+  if (anIndex + 1 === anArray.length) {
+    return "border-b-0";
+  }
+}
 
-  const state: ManageState = reactive({
-    isOpened1: false,
-    isOpened2: false,
-    isOpened3: false,
+onMounted(() => {
+  if (process.client) {
+    var prevScrollpos = window.scrollY;
+    window.onscroll = function () {
+      var currentScrollPos = window.scrollY;
+      if (prevScrollpos > currentScrollPos) {
+        document.getElementById("navbar")!.style.top = ".75rem";
+      } else {
+        document.getElementById("navbar")!.style.top = "-20rem";
+      }
+      prevScrollpos = currentScrollPos;
+    };
+  }
+});
+
+//handle calendly
+const calendly = useCalendly();
+const handleBook = () => {
+  calendly.initPopupWidget({
+    url: "https://calendly.com/roses-in-rhapsody/15min",
   });
-
-  onMounted(() => {
-    if (process.client) {
-      var prevScrollpos = window.scrollY;
-      window.onscroll = function () {
-        var currentScrollPos = window.scrollY;
-        if (prevScrollpos > currentScrollPos) {
-          document.getElementById('navbar')!.style.top = '.75rem';
-        } else {
-          document.getElementById('navbar')!.style.top = '-20rem';
-        }
-        prevScrollpos = currentScrollPos;
-      };
-    }
-  });
-
-  //handle calendly
-  const calendly = useCalendly();
-  const handleBook = () => {
-    calendly.initPopupWidget({
-      url: 'https://calendly.com/roses-in-rhapsody/15min',
-    });
-  };
+};
 </script>
 
 <style>
-  #fsaBottomBar {
-    display: hidden;
-  }
+#fsaBottomBar {
+  display: hidden;
+}
 </style>
