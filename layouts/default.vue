@@ -226,79 +226,80 @@
 </template>
 
 <script setup lang="ts">
-//handle nav scroll
-import FixedSizeAccordion from "vue-fixed-size-accordion";
+  //handle nav scroll
+  import FixedSizeAccordion from 'vue-fixed-size-accordion';
 
-type FAQ = {
-  question: string;
-  answer: string;
-  isOpen: Ref<boolean>;
-};
+  type FAQ = {
+    question: string;
+    answer: string;
+    isOpen: Ref<boolean>;
+  };
 
-const faqItems: Array<FAQ> = [
-  {
-    question: "Why should I invest in this service, I can do it myself?",
-    answer:
-      "Of course you can do it yourself but we make it so that it’s one more thing you don’t have to worry about.",
-    isOpen: ref(false),
-  },
-  {
-    question: "Can the price be lower?",
-    answer:
-      "We cater to all clients with our payment plans and we can customize around your budget.",
-    isOpen: ref(false),
-  },
-  {
-    question: "Are you good at this?",
-    answer:
-      "I pride myself in my customer service as I had worked in the field for over ten years. With that being said, I will curate an experience that you can cherish. And please feel free to look at the pictures and reviews and judge for yourself on our quality.",
-    isOpen: ref(false),
-  },
-];
+  const faqItems: Array<FAQ> = [
+    {
+      question: 'Why should I invest in this service, I can do it myself?',
+      answer:
+        'Of course you can do it yourself but we make it so that it’s one more thing you don’t have to worry about.',
+      isOpen: ref(false),
+    },
+    {
+      question: 'Can the price be lower?',
+      answer:
+        'We cater to all clients with our payment plans and we can customize around your budget.',
+      isOpen: ref(false),
+    },
+    {
+      question: 'Are you good at this?',
+      answer:
+        'I pride myself in my customer service as I had worked in the field for over ten years. With that being said, I will curate an experience that you can cherish. And please feel free to look at the pictures and reviews and judge for yourself on our quality.',
+      isOpen: ref(false),
+    },
+  ];
 
-function roundListTopBottom(anIndex: number, anArray: Array<any>) {
-  if (anIndex === 0) {
-    return "rounded-t-2xl";
+  function roundListTopBottom(anIndex: number, anArray: Array<any>) {
+    if (anIndex === 0) {
+      return 'rounded-t-2xl';
+    }
+    if (anIndex + 1 === anArray.length) {
+      return 'rounded-b-2xl';
+    }
   }
-  if (anIndex + 1 === anArray.length) {
-    return "rounded-b-2xl";
+  function noTopBottomListBorder(anIndex: number, anArray: Array<any>) {
+    if (anIndex === 0) {
+      return 'border-t-0';
+    }
+    if (anIndex + 1 === anArray.length) {
+      return 'border-b-0';
+    }
   }
-}
-function noTopBottomListBorder(anIndex: number, anArray: Array<any>) {
-  if (anIndex === 0) {
-    return "border-t-0";
-  }
-  if (anIndex + 1 === anArray.length) {
-    return "border-b-0";
-  }
-}
 
-onMounted(() => {
-  if (process.client) {
-    var prevScrollpos = window.scrollY;
-    window.onscroll = function () {
-      var currentScrollPos = window.scrollY;
-      if (prevScrollpos > currentScrollPos) {
-        document.getElementById("navbar")!.style.top = ".75rem";
-      } else {
-        document.getElementById("navbar")!.style.top = "-20rem";
-      }
-      prevScrollpos = currentScrollPos;
-    };
-  }
-});
-
-//handle calendly
-const calendly = useCalendly();
-const handleBook = () => {
-  calendly.initPopupWidget({
-    url: "https://calendly.com/roses-in-rhapsody/15min",
+  onMounted(() => {
+    if (process.client) {
+      var prevScrollpos = window.scrollY;
+      window.onscroll = function () {
+        var currentScrollPos = window.scrollY;
+        if (prevScrollpos > currentScrollPos) {
+          document.getElementById('navbar')!.style.top = '.75rem';
+        } else {
+          document.getElementById('navbar')!.style.top = '-20rem';
+        }
+        prevScrollpos = currentScrollPos;
+      };
+    }
   });
-};
+
+  //handle calendly
+  const calendly = useCalendly();
+  const handleBook = () => {
+    calendly.initPopupWidget({
+      url: 'https://calendly.com/roses-in-rhapsody/15min',
+    });
+  };
 </script>
 
 <style>
-#fsaBottomBar {
-  display: hidden;
-}
+  #fsaBottomBar,
+  #faq-0-bottom {
+    display: hidden;
+  }
 </style>
