@@ -300,6 +300,6 @@
 <style>
   #fsaBottomBar,
   #faq-0-bottom {
-    display: hidden;
+    display: none;
   }
 </style>

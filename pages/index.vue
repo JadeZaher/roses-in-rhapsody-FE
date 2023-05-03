@@ -3,7 +3,9 @@
     title="Do something special."
     subtitle="Show someone you love how much you care with Roses In Rhapsody."
   />
-  <div class="flex flex-col justify-center items-center bg-black">
+  <div
+    class="flex flex-col justify-center items-center bg-black rounded-2xl mt-[-1rem]"
+  >
     <!-- testimonials -->
     <div
       class="flex flex-col w-[90vw] justify-center bg-black rounded-2xl pb-6 p-3 items-center bg-right-bottom bg-cover shadow-bottom mt-[2vh]"
@@ -76,12 +78,12 @@
 
     <!-- services -->
     <div
-      class="rounded-t-2xl flex flex-col w-full bg-black p-3 pt-4 pb-10 md:max-w-[90vw]"
+      class="rounded-2xl flex flex-col w-full bg-black p-3 pt-4 pb-10 md:max-w-[90vw]"
     >
       <div class="md:flex-row flex-col flex">
         <!-- families service -->
         <div
-          class="md:w-[80vw] p-[4vw] md:mr-4 md:mb-4 md:rounded-tl-2xl md:rounded-t-[0] rounded-t-2xl font-semibold font-sans md:text-left text-center bg-white text-body flex flex-col justify-center items-center"
+          class="md:w-full p-[4vw] md:mr-4 md:mb-4 md:rounded-tl-2xl md:rounded-t-[0] rounded-t-2xl font-semibold font-sans md:text-left text-center bg-white text-body flex flex-col justify-center items-center"
         >
           <!-- copy -->
           <p class="my-4 md:w-3/5">
@@ -99,7 +101,7 @@
         </div>
         <!-- bg -->
         <div
-          class="bg-gradientFamilies md:mb-4 md:rounded-tr-2xl rounded-b-2xl md:rounded-b-none bg-cover bg-center md:h-[60vh] h-[40vh] w-full grid place-items-center"
+          class="bg-gradientFamilies md:mb-4 md:rounded-tr-2xl rounded-b-2xl md:rounded-b-none bg-cover bg-center md:h-[80vh] h-[40vh] w-full grid place-items-center"
         >
           <NuxtLink to="/families">
             <h3
@@ -118,7 +120,7 @@
       <div class="md:flex-row flex-col-reverse flex">
         <!-- bg -->
         <div
-          class="bg-gradientPartners md:mt-4 md:rounded-bl-2xl md:rounded-b-none rounded-b-2xl bg-cover bg-center md:h-[60vh] h-[40vh] w-full grid place-items-center"
+          class="bg-gradientPartners md:mt-4 md:rounded-bl-2xl md:rounded-b-none rounded-b-2xl bg-cover bg-center md:h-[80vh] h-[40vh] w-full grid place-items-center"
         >
           <NuxtLink to="/partners">
             <h3
@@ -132,7 +134,7 @@
           </NuxtLink>
         </div>
         <div
-          class="md:w-[80vw] p-[5vw] md:ml-4 mt-4 md:rounded-br-2xl md:rounded-t-none rounded-t-2xl font-sans md:text-left text-center bg-white font-semibold text-body flex flex-col justify-center items-center"
+          class="md:w-full p-[5vw] md:ml-4 mt-4 md:rounded-br-2xl md:rounded-t-none rounded-t-2xl font-sans md:text-left text-center bg-white font-semibold text-body flex flex-col justify-center items-center"
         >
           <!-- copy -->
           <p class="my-4 md:w-3/5">

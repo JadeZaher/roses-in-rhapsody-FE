@@ -1,6 +1,6 @@
 <template>
   <div
-    class="md:py-[10vh] py-[15vh] min-h-screen w-full bg-cover bg-[url('/RoccoPink.jpg')] grid place-items-center"
+    class="py-[15vh] min-h-screen w-full bg-cover bg-[url('/RoccoPink.jpg')] grid place-items-center"
   >
     <div
       class="w-[90vw] bg-white border-2 border-black p-[2vw] rounded-2xl shadow-lg"

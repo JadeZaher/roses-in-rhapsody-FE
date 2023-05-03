@@ -4,7 +4,7 @@
   </div>
 
   <!-- booking -->
-  <div class="p-2 bg-black rounded-t-2xl grid place-items-center mt-[-1vh]">
+  <div class="p-2 bg-black rounded-2xl grid place-items-center mt-[-1rem]">
     <div
       class="grid place-items-center py-2 bg-[url('/RoccoWhite.jpg')] rounded-2xl bg-cover max-w-[90vw] bg-no-repeat bg-opacity-70 md:max-w-[90vw] min-h-[100vh] shadow-top"
     >

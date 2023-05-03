@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-black p-3 mt-[-1px]">
+  <div class="bg-black p-3 mt-[-1px] rounded-2xl">
     <div
       class="grid place-items-center py-5 bg-[url('/RoccoWhite.jpg')] rounded-2xl mt-[-2vh] bg-cover bg-no-repeat bg-opacity-70 min-h-[98vh] shadow-top"
     >

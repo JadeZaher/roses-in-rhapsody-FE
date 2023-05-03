@@ -4,7 +4,7 @@
     subtitle="Share a Tender Experience With Who You Love From Wherever You Are"
   />
   <div
-    class="min-h-[38vh] bg-white py-[3vh] grid place-items-center mt-[-2vh] rounded-t-2xl"
+    class="min-h-[38vh] bg-white py-[3vh] grid place-items-center mt-[-2vh] rounded-2xl"
   >
     <h2
       class="font-cursive font-semibold md:text-header text-subtitle text-center max-w-[80%]"
@@ -16,7 +16,7 @@
     </h2>
   </div>
   <!-- gallery -->
-  <div class="flex flex-col items-center bg-black">
+  <div class="flex flex-col items-center bg-black rounded-2xl">
     <div
       class="flex flex-col w-[90vw] justify-center bg-black rounded-2xl pb-6 items-center bg-right-bottom bg-cover shadow-bottom mt-[2vh]"
     >
@@ -82,7 +82,7 @@
       </carousel>
     </div>
     <!-- services -->
-    <div class="flex flex-col justify-center items-center bg-black">
+    <div class="flex flex-col justify-center items-center bg-black rounded-2xl">
       <div class="md:w-[90vw]">
         <div class="rounded-t-2xl flex flex-col w-full bg-black p-3 pt-4 pb-10">
           <div class="md:flex-row flex-col flex bg-white rounded-2xl my-2">

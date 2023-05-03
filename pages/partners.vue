@@ -3,7 +3,7 @@
     title="Level Up Your Hospitality"
     subtitle="Helping your guests make memories is the easiest way to make a splash"
   />
-  <div class="flex flex-col items-center bg-black">
+  <div class="flex flex-col items-center bg-black rounded-2xl">
     <div
       class="min-h-[38vh] bg-white py-[3vh] grid place-items-center mt-[-2vh] rounded-t-2xl"
     >
