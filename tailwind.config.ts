@@ -39,8 +39,6 @@ export default <Partial<Config>>{
         fadeIn: 'fadeIn 2s ease-in-out',
       },
       backgroundImage: {
-        gradientPinkDesktop: 'var(--background-gradient-desktop)',
-        gradientPinkMobile: 'var(--background-gradient-mobile)',
         gradientPartners: 'var(--background-gradient-families)',
         gradientFamilies: 'var(--background-gradient-partners)',
         gradientBase: 'var(--background-gradient-base)',

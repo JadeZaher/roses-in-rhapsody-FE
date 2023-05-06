@@ -295,6 +295,15 @@
       url: 'https://calendly.com/roses-in-rhapsody/15min',
     });
   };
+
+  useSeoMeta({
+    title: 'Roses In Rhapsody',
+    ogTitle: 'Roses In Rhapsody',
+    description:
+      'Event planning, and decorating! Honeymoons, and anniversaries! Graduation, and birthday parties. Professional services by Roses In Rhapsody.',
+    ogDescription:
+      'Event planning, and decorating! Honeymoons, and anniversaries! Graduation, and birthday parties. Professional services by Roses In Rhapsody.',
+  });
 </script>
 
 <style>
